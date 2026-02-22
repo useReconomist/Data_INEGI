@@ -12,7 +12,7 @@ format:
     theme: zephyr
     toc: true       
     toc-depth: 2
-    code-fold: false 
+    code-fold: true
     smooth-scroll: true
 ---
 
