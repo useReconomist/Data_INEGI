@@ -1,6 +1,6 @@
 ---
-title: Mi primer documento
-author: Hellow world noe
+title: Datos espaciales de INEGI
+author: Noé
 format: 
   dashboard:
     orientation: columns
