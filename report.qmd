@@ -24,11 +24,13 @@ library(leaflet)
 library(mapview)
 library(jsonlite)
 library(gt)
-
 ```
 
+
 # Introducción
+
 ![](imagen/i1.png)
+
 Ando probando subir documentos/apps a possit connect cloud, así que este tutorial me servirá tanto para compartir como descargar información desde el portal del [INEGI](https://www.inegi.org.mx/servicios/catalogoUnico.html) así como para practicar el proceso para subirlos.
 
 # Librerías
