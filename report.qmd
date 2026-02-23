@@ -1,6 +1,6 @@
 ---
 title: Datos espaciales de INEGI
-author: '**Noé Osorio**'
+author: 'Noé Osorio'
 lang: es
 format: 
   html:
