@@ -1,9 +1,6 @@
 ---
 title: Datos espaciales de INEGI
-author: "**Noé Osorio** <a href='https://www.linkedin.com/in/noe-osorio-garcia-979a1818a/' target='_blank'>
-  <i class='bi bi-linkedin'></i></a>
-  <a href='https://x.com/NoeOsorioPK' target='_blank'>
-  <i class='bi bi-twitter-x'></i></a>"
+author: "Noé Osorio"
 format: 
   html:
     theme: zephyr
