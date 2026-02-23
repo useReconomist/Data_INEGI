@@ -2,11 +2,6 @@
 title: Datos espaciales de INEGI
 author: '**Noé Osorio**'
 lang: es
-language:
-  title-block-author-single: "Autor"
-  toc-title-document: "Tabla de contenidos"
-  code-summary: "Ver código"
-  section-title-footnotes: "Notas al pie"
 format: 
   html:
     theme: zephyr
