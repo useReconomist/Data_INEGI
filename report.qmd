@@ -1,7 +1,13 @@
 ---
 title: Datos espaciales de INEGI
-author: 'Noé Osorio'
+author: 
+  - 'Noé Osorio <a href="https://www.linkedin.com/in/noe-osorio-garcia-979a1818a/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://x.com/NoeOsorioPK" target="_blank"><i class="bi bi-twitter-x"></i></a>'
+  - 'Uriel Mendoza <a href="https://www.linkedin.com/in/uriel-mendoza-46146b1b9/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://comulab.geoint.mx/site/integrante/id/6.html" target="_blank"><i class="bi bi-globe"></i></a>'
 lang: es
+language:
+  title-block-author-plural: "Autores"
+  toc-title-document: "Tabla de contenidos"
+  code-summary: "Ver código"
 format: 
   html:
     theme: zephyr
