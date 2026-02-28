@@ -148,3 +148,16 @@ estado
 mapview(estado)
 ```
 
+# Mi sección {.tabset}
+
+## Parte 1
+
+Contenido de la parte 1
+
+## Parte 2
+
+Contenido de la parte 2
+
+## Parte 3
+
+Contenido de la parte 3
