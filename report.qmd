@@ -1,7 +1,7 @@
 ---
-title: Datos espaciales de INEGI
+title: Open Data Day 2026
 author: 
-  - 'Noé Osorio <a href="https://www.linkedin.com/in/noe-osorio-garcia-979a1818a/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://x.com/NoeOsorioPK" target="_blank"><i class="bi bi-twitter-x"></i></a>'
+  - 'Noé Osorio <a href="https://www.linkedin.com/in/noe-osorio-garcia-979a1818a/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://x.com/NoeOsorioPK" target="_blank"><i class="bi bi-twitter-x"></i></a> <a href="mailto:noe.osorio@cimat.mx;ecostat.nog@gmail.com;noe.osorio@flacso.edu.mx" title="noe.osorio@cimat.mx | ecostat.nog@gmail.com | noe.osorio@flacso.edu.mx"><i class="bi bi-envelope"></i></a>'
   - 'Uriel Mendoza <a href="https://www.linkedin.com/in/uriel-mendoza-46146b1b9/" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://comulab.geoint.mx/site/integrante/id/6.html" target="_blank"><i class="bi bi-globe"></i></a>'
 lang: es
 language:
@@ -12,6 +12,7 @@ format:
   html:
     theme: zephyr
     toc: true
+    lightbox: true
     toc-depth: 2
     code-fold: true
     smooth-scroll: true
@@ -34,7 +35,7 @@ library(gt)
 
 OpenDataDay, Como descargar información desde el portal del [INEGI](https://www.inegi.org.mx/servicios/catalogoUnico.html) así como para practicar el proceso para subirlos.
 
-# Librerías
+# Parte 1: Datos Espaciales
 
 Usaremos las siguientes librerías: tidyverse manipulación de datos, sf para lectura/manipulación de datos espaciales (vectoriales) mapview para una visualización sencilla.
 
@@ -107,7 +108,7 @@ pob_nal %>%
     )
 ```
 
-# Datos espaciales
+## Datos espaciales
 
 Como puedes ver solo leímos un link y fue sencillo de obtener, no necesitamos ningún token para poder leer la información, pero bueno ahora sí a leer datos espaciales (al fin!) ¿Recuerdas la Guía para desarrolladores? en el [Catálogo Único de Claves Geoestadísticas](https://www.inegi.org.mx/servicios/catalogoUnico.html) cada información que indica, menciona que puedes obtener la información vectorial en formato geojson, puede ser ya sea a nivel nacional o información por Estado municipio, Ageb ,acá presentaremos algunos ejemplos
 
@@ -147,4 +148,63 @@ estado
 ```{r}
 mapview(estado)
 ```
+
+# Parte 2: Herramientas para el análisis espacial
+
+En esta sección exploraremos algunas herramientas prácticas que amplían las posibilidades de tu análisis espacial. Algunos ejemplos calcular tiempos de desplazamiento, trazar rutas, y convertir texto en coordenadas (y viceversa).
+
+## Isocronas
+
+Las isocronas delimitan el área alcanzable desde un punto en un tiempo determinado. En lugar de medir distancia en kilómetros (que ignora la infraestructura real) miden distancia en tiempo "real" de desplazamiento a través de vialidades. (Recordatorio de Leslie Kern)
+
+## Ruteo
+
+El ruteo calcula rutas reales sobre la red vial entre dos puntos. Veremos cómo usarlo con OSRM (gratuito, basado en OpenStreetMap), Mapbox y la API de INEGI. La red vial no es neutral: refleja décadas de inversión pública desigual
+
+## Geocoding
+
+Convierte direcciones de texto en coordenadas geográficas. Es el primer paso para espacializar bases de datos administrativas: clínicas, escuelas, juzgados, centros de atención a violencia, etc.
+
+## Reverse geocoding
+
+A partir de coordenadas, obtenemos la dirección, colonia o municipio al que pertenecen. (Útil cuando trabajas con datos de campo, registros administrativos o datos de movilidad)
+
+# Parte 3: Modelos de lenguaje para análisis espacial
+
+
+## Uso de llm para extraer información de imágenes/fotos
+
+Seguramente te ha pasado que queremos extraer información de mapas ya sea históricos, algun mapa que te gustó y le tomaste una foto o hechos por otras personas pero no tenemos ni el archivo, ni conocemos a la persona o no pudimos contactarla, entonces con ayuda de modelos de lenguaje podemos apoyarnos en extraer la información. POr ejemplo acá hay un mapa (Puedes tomarle foto)
+
+![](imagen/i2.png)
+
+Para usar los modelos de lenguaje en R existen distintas librerías, una que me gusta a mí se llama [ellmer](https://ellmer.tidyverse.org/) , pero antes de iniciar para ocupar modelos de lenguaje tenemos 2 Opciones:
+
+* Usar modelos pequeños de forma local [ollama](https://ollama.com/)
+* Usar alguna api, ya sea gratuita o de pago (Acá lo haremos gratis) Ya sea a través de [GitHub](https://github.com/marketplace) o de [Gemini](https://ai.google.dev/gemini-api/docs?hl=es-419) 
+
+### Breve pausa para ver si ya conseguimos algún token para conectarnos ...
+
+Como buena práctica te recomiendo guardarlo en una variable de entorno (puedes hacerlo de forma sencilla con la librería [usethis](https://usethis.r-lib.org/)...usethis::edit_r_environ()) pero ahorita lo haremos como mala practica.
+Ya se asi usaste algún llm de github o gemini usaremos la palabra *chat*, (para hacernos la vida un poco facil en este ejercicio ) les llamaremos m1 y m2 
+
+```{r}
+library(ellmer)
+
+m1 = chat_github()
+ellmer::models_google_gemini()
+m2 = chat_google_gemini()
+```
+
+Una vez que tenemos nuestro modelo podemos verificar si puede "respondernos" 
+
+```{r}
+m1$chat("CUentame un chiste breve sobre datos abiertos ")
+```
+
+```{r}
+m2$chat("se breve, ¿Sabes que esel OpenDataDay?")
+```
+
+
 
