@@ -26,6 +26,7 @@ library(leaflet)
 library(mapview)
 library(jsonlite)
 library(gt)
+library(ellmer)
 ```
 
 
