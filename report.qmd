@@ -192,7 +192,6 @@ Ya se asi usaste algún llm de github o gemini usaremos la palabra *chat*, (para
 ```{r}
 library(ellmer)
 
-m1 = chat_github()
 ellmer::models_google_gemini()
 m2 = chat_google_gemini()
 ```
@@ -200,7 +199,7 @@ m2 = chat_google_gemini()
 Una vez que tenemos nuestro modelo podemos verificar si puede "respondernos" 
 
 ```{r}
-m1$chat("CUentame un chiste breve sobre datos abiertos ")
+m2$chat("CUentame un chiste breve sobre datos abiertos ")
 ```
 
 ```{r}
