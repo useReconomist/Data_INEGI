@@ -197,7 +197,6 @@ m2 = chat_google_gemini()
 ```
 
 Una vez que tenemos nuestro modelo podemos verificar si puede "respondernos" 
-
 ```{r}
 m2$chat("CUentame un chiste breve sobre datos abiertos ")
 ```
