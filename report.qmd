@@ -34,11 +34,14 @@ library(ellmer)
 
 ![](imagen/i1.png)
 
-OpenDataDay, Como descargar información desde el portal del [INEGI](https://www.inegi.org.mx/servicios/catalogoUnico.html) así como para practicar el proceso para subirlos.
+OpenDataDay, Como descargar información desde el portal del [INEGI](https://www.inegi.org.mx/servicios/catalogoUnico.html).
 
 # Parte 1: Datos Espaciales
 
-Usaremos las siguientes librerías: tidyverse manipulación de datos, sf para lectura/manipulación de datos espaciales (vectoriales) mapview para una visualización sencilla.
+En esta parte usaremos las siguientes librerías: tidyverse manipulación de datos, sf para lectura/manipulación de datos espaciales (vectoriales) mapview para una visualización sencilla. en caso de que no las tengas puedes usar el comando 
+"install.packages("acá el nombre de la librerías que vas a instalar")" por ejemplo: *install.packages("sf")* y ejecutar la función.
+
+Una vez instaladas, es necesario llamarlas.
 
 ```{r eval=FALSE}
 library(tidyverse)
@@ -60,8 +63,12 @@ Para cada consulta es un link diferente o puede ser el mismo link pero se van ag
 
 ## Entidades.
 
-Le información que puedes consultar está tanto en formato tabla(json)/widget/geojson. 
-El primere ejemplo (y único) para json leeremos la información de poblacióin a nivel nacional.
+Le información que puedes consultar está tanto en formato tabla(json) ó "espacial" (geojson). 
+El primer ejemplo (y único) para *Tabla* (json) leeremos la información de población a nivel nacional. 
+
+**Ojo que algunas veces ocupo las librerías de esta forma: "nombre::función"** 
+
+Lo hago así ya que no quiero llamar a toda la librería únicamente a esa función. Acá la función viene de la librería jsonlite y la función "fromJSON" es la que lee ese tipo de archivos
 
 ```{r}
 pob_nal = jsonlite::fromJSON(
@@ -70,7 +77,7 @@ pob_nal = jsonlite::fromJSON(
   )
 ```
 
-Al hacer esta consulta nos devuelve un objeto tipo lista que contiene **datos**, **metadatos**, **numReg**
+Al hacer esta consulta nos devuelve un objeto tipo lista que contiene 3 elementos: **datos**, **metadatos**, **numReg**
 
 ```{r}
 str(pob_nal)
@@ -117,9 +124,9 @@ Como puedes ver solo leímos un link y fue sencillo de obtener, no necesitamos n
 
 Para leer Una entidad en específico debemos armar un link. de la siguiente forma:
 
-* https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee/**{cve_ent}** 
+*https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee/**{cve_ent}*
 
-Donde dice **cve_ent** es donde se debe reemplazar por un número del 1 al 32 para asignar los Estados, Algunos que me sé de memoria, 1 aguascalientes, el 15 Edo Mex, 09 CDMX,32 Zacatecas etc.. Ojo que la clave del Estado debe ir a dos cifras, o sea si ponemos CDMX tendría que ser "09", Puedes consultar las entidades acá [CATÁLOGO DE ENTIDADES FEDERATIVAS](https://www.agricultura.gob.mx/sites/default/files/sagarpa/document/2018/07/17/8/180717115914/entidades-federativas.pdf) y para hacernos la consulta sencilla lo dividimos en 2, el link_base y el estado que solo se lo pegamos. HAré el ejercicio con la clave 11 (Guanajuato)
+Donde dice **cve_ent** es donde se debe reemplazar por un número del 1 al 32 para asignar los Estados, Algunos que me sé de memoria, 1 aguascalientes, el 15 Edo Mex, 09 CDMX, 32 Zacatecas etc.. Ojo que la clave del Estado debe ir *a dos cifras*, o sea si ponemos CDMX tendría que ser "09", Puedes consultar las entidades acá [CATÁLOGO DE ENTIDADES FEDERATIVAS](https://www.agricultura.gob.mx/sites/default/files/sagarpa/document/2018/07/17/8/180717115914/entidades-federativas.pdf) y para hacernos la consulta sencilla lo dividimos en 2, el link_base y el estado que solo se lo pegamos. Haré el ejercicio con la clave 11 (Guanajuato)
 
 Este es el link al que se hará la consulta:
 
@@ -140,15 +147,43 @@ estado = st_read(
 
 ¿Qué devuelve esta consulta?
 
-Nos regresa los cambios de Nombre del Estado, Población total, femenina, masculina y el total de viviendas habitadas (todo esto del último censo de población del 2020)
+Nos regresa un objeto espacial que contiene las variables: de Nombre del Estado, Población total, femenina, masculina y el total de viviendas habitadas (todo esto del último censo de población del 2020)
 
 ```{r}
 estado 
 ```
 
+En R hay muchas formas de visualizar, plot, leaflet, con mapview puedes hacer la visualización dinámica.
+
 ```{r}
 mapview(estado)
 ```
+
+*Recuerda que cuando leemos json regreso en su mayoría de veces todo en texto.*
+
+Como puedes ver a cada alcaldía le asignó un color distinto, esto es porque está haciendo un "fill" por nombre y no por el valor de viviendas, puedes corroborar esto pasándolo a formato tabla
+
+```{r}
+mun = st_read("https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/09",quiet=TRUE)
+
+mapview(mun,z="total_viviendas_habitadas")
+```
+
+Formato tabla
+
+```{r}
+mun %>% as_tibble()
+```
+pasamos a numérico y sobreescribimos
+
+```{r}
+mun = mun %>% mutate(across(c("pob_total":"total_viviendas_habitadas"),as.numeric))
+```
+
+```{r}
+mapview(mun,z="total_viviendas_habitadas")
+```
+
 
 # Parte 2: Herramientas para el análisis espacial
 
