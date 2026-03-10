@@ -212,6 +212,39 @@
         "Archs": "x64"
       }
     },
+    "S7": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "S7",
+        "Title": "An Object Oriented System Meant to Become a Successor to S3 and\nS4",
+        "Version": "0.2.0",
+        "Authors@R": "c(\n    person(\"Object-Oriented Programming Working Group\", role = \"cph\"),\n    person(\"Davis\", \"Vaughan\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-2739-7082\")),\n    person(\"Tomasz\", \"Kalinowski\", role = \"aut\"),\n    person(\"Will\", \"Landau\", role = \"aut\"),\n    person(\"Michael\", \"Lawrence\", role = \"aut\"),\n    person(\"Martin\", \"Maechler\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-8685-9910\")),\n    person(\"Luke\", \"Tierney\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-4757-117X\"))\n  )",
+        "Description": "A new object oriented programming system designed to be a\n    successor to S3 and S4. It includes formal class, generic, and method\n    specification, and a limited form of multiple dispatch. It has been\n    designed and implemented collaboratively by the R Consortium\n    Object-Oriented Programming Working Group, which includes\n    representatives from R-Core, 'Bioconductor', 'Posit'/'tidyverse', and\n    the wider R community.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://rconsortium.github.io/S7/,\nhttps://github.com/RConsortium/S7",
+        "BugReports": "https://github.com/RConsortium/S7/issues",
+        "Depends": "R (>= 3.5.0)",
+        "Imports": "utils",
+        "Suggests": "bench, callr, covr, knitr, methods, rmarkdown, testthat (>=\n3.2.0), tibble",
+        "VignetteBuilder": "knitr",
+        "Config/build/compilation-database": "true",
+        "Config/Needs/website": "sloop",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "TRUE",
+        "Config/testthat/start-first": "external-generic",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-11-06 17:18:31 UTC; hadleywickham",
+        "Author": "Object-Oriented Programming Working Group [cph],\n  Davis Vaughan [aut],\n  Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>),\n  Tomasz Kalinowski [aut],\n  Will Landau [aut],\n  Michael Lawrence [aut],\n  Martin Maechler [aut] (<https://orcid.org/0000-0002-8685-9910>),\n  Luke Tierney [aut],\n  Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>)",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-11-07 12:50:02 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2025-01-11 01:45:23 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "V8": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -831,6 +864,35 @@
         "Built": "R 4.4.1; ; 2024-11-04 02:28:51 UTC; windows"
       }
     },
+    "coro": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "coro",
+        "Title": "'Coroutines' for R",
+        "Version": "1.1.0",
+        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Provides 'coroutines' for R, a family of functions that can\n    be suspended and resumed later on. This includes 'async' functions\n    (which await) and generators (which yield). 'Async' functions are\n    based on the concurrency framework of the 'promises' package.\n    Generators are based on a dependency free iteration protocol defined\n    in 'coro' and are compatible with iterators from the 'reticulate'\n    package.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/r-lib/coro, https://coro.r-lib.org/",
+        "BugReports": "https://github.com/r-lib/coro/issues",
+        "Depends": "R (>= 3.5.0)",
+        "Imports": "rlang (>= 0.4.12)",
+        "Suggests": "knitr, later (>= 1.1.0), magrittr (>= 2.0.0), promises,\nreticulate, rmarkdown, testthat (>= 3.0.0)",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-11-05 09:54:43 UTC; lionel",
+        "Author": "Lionel Henry [aut, cre],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Lionel Henry <lionel@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-11-05 10:30:09 UTC",
+        "Built": "R 4.4.2; ; 2025-01-11 01:37:20 UTC; windows"
+      }
+    },
     "cpp11": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -920,27 +982,33 @@
         "Package": "curl",
         "Type": "Package",
         "Title": "A Modern and Flexible Web Client for R",
-        "Version": "6.1.0",
+        "Version": "7.0.0",
         "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n      comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Hadley\", \"Wickham\", role = \"ctb\"),\n    person(\"Posit Software, PBC\", role = \"cph\"))",
         "Description": "Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully\n    configurable HTTP/FTP requests where responses can be processed in memory, on\n    disk, or streaming via the callback or connection interfaces. Some knowledge\n    of 'libcurl' is recommended; for a more-user-friendly web client see the \n    'httr2' package which builds on this package with http specific tools and logic.",
         "License": "MIT + file LICENSE",
-        "SystemRequirements": "libcurl (>= 7.62): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)",
+        "SystemRequirements": "libcurl (>= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)",
         "URL": "https://jeroen.r-universe.dev/curl",
         "BugReports": "https://github.com/jeroen/curl/issues",
         "Suggests": "spelling, testthat (>= 1.0.0), knitr, jsonlite, later,\nrmarkdown, httpuv (>= 1.4.4), webutils",
         "VignetteBuilder": "knitr",
         "Depends": "R (>= 3.0.0)",
-        "RoxygenNote": "7.3.2.9000",
+        "RoxygenNote": "7.3.2",
         "Encoding": "UTF-8",
         "Language": "en-US",
         "NeedsCompilation": "yes",
-        "Packaged": "2024-12-22 11:16:23 UTC; jeroen",
-        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  Posit Software, PBC [cph]",
+        "Packaged": "2025-08-19 10:05:57 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  Posit Software, PBC [cph]",
         "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
         "Repository": "CRAN",
-        "Date/Publication": "2025-01-06 15:30:02 UTC",
-        "Built": "R 4.4.2; x86_64-w64-mingw32; 2025-01-16 01:52:27 UTC; windows",
-        "Archs": "x64"
+        "Date/Publication": "2025-08-19 22:40:02 UTC",
+        "Built": "R 4.4.3; x86_64-w64-mingw32; 2026-02-25 01:51:25 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemotePkgRef": "curl",
+        "RemoteRef": "curl",
+        "RemoteRepos": "https://cran.rstudio.com/",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "7.0.0"
       }
     },
     "data.table": {
@@ -1114,6 +1182,49 @@
         "Date/Publication": "2024-09-16 09:53:34 UTC",
         "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-07 02:15:27 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "ellmer": {
+      "Source": "github",
+      "Repository": null,
+      "description": {
+        "Package": "ellmer",
+        "Title": "Chat with Large Language Models",
+        "Version": "0.4.0.9000",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Joe\", \"Cheng\", role = \"aut\"),\n    person(\"Aaron\", \"Jacobs\", role = \"aut\"),\n    person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-7111-0077\")),\n    person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9986-114X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\"))\n  )",
+        "Description": "Chat with large language models from a range of providers\n    including 'Claude' <https://claude.ai>, 'OpenAI'\n    <https://chatgpt.com>, and more. Supports streaming, asynchronous\n    calls, tool calling, and structured data extraction.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://ellmer.tidyverse.org, https://github.com/tidyverse/ellmer",
+        "BugReports": "https://github.com/tidyverse/ellmer/issues",
+        "Depends": "R (>= 4.1)",
+        "Imports": "cli, coro (>= 1.1.0), glue, httr2 (>= 1.2.1), jsonlite, later\n(>= 1.4.0), lifecycle, promises (>= 1.3.1), R6, rlang (>=\n1.1.0), S7 (>= 0.2.0), tibble, vctrs",
+        "Suggests": "connectcreds, curl (>= 6.0.1), gargle, gitcreds, jose, knitr,\nmagick, openssl, paws.common, png, rmarkdown, shiny, shinychat\n(>= 0.2.0), testthat (>= 3.0.0), vcr (>= 2.0.0), withr",
+        "VignetteBuilder": "knitr",
+        "Remotes": "posit-dev/shinychat/pkg-r#167",
+        "Config/Needs/website": "tidyverse/tidytemplate, rmarkdown",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/testthat/start-first": "chat, provider*",
+        "Encoding": "UTF-8",
+        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "7.3.3",
+        "Collate": "'utils-S7.R' 'types.R' 'ellmer-package.R' 'tools-def.R'\n'content.R' 'provider.R' 'as-json.R' 'batch-chat.R'\n'chat-structured.R' 'chat-tools-content.R' 'turns.R'\n'chat-tools.R' 'chat-utils.R' 'utils-coro.R' 'chat.R'\n'content-image.R' 'content-pdf.R' 'content-replay.R' 'httr2.R'\n'import-standalone-obj-type.R' 'import-standalone-purrr.R'\n'import-standalone-types-check.R' 'interpolate.R' 'live.R'\n'parallel-chat.R' 'params.R' 'provider-any.R' 'provider-aws.R'\n'provider-openai-compatible.R' 'provider-azure.R'\n'provider-claude-files.R' 'provider-claude-tools.R'\n'provider-claude.R' 'provider-google.R' 'provider-cloudflare.R'\n'provider-databricks.R' 'provider-deepseek.R'\n'provider-github.R' 'provider-google-tools.R'\n'provider-google-upload.R' 'provider-groq.R'\n'provider-huggingface.R' 'provider-mistral.R'\n'provider-ollama.R' 'provider-openai-tools.R'\n'provider-openai.R' 'provider-openrouter.R'\n'provider-perplexity.R' 'provider-portkey.R'\n'provider-snowflake.R' 'provider-vllm.R' 'schema.R' 'tokens.R'\n'tools-built-in.R' 'tools-def-auto.R' 'utils-auth.R'\n'utils-callbacks.R' 'utils-cat.R' 'utils-merge.R'\n'utils-prettytime.R' 'utils.R' 'zzz.R'",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "ellmer",
+        "RemoteUsername": "tidyverse",
+        "RemotePkgRef": "tidyverse/ellmer",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "9cfad92f37b3868afe7a384d41bb0ed34eba1064",
+        "GithubRepo": "ellmer",
+        "GithubUsername": "tidyverse",
+        "GithubRef": "HEAD",
+        "GithubSHA1": "9cfad92f37b3868afe7a384d41bb0ed34eba1064",
+        "NeedsCompilation": "no",
+        "Packaged": "2026-02-26 21:29:39 UTC; DELL",
+        "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>),\n  Joe Cheng [aut],\n  Aaron Jacobs [aut],\n  Garrick Aden-Buie [aut] (<https://orcid.org/0000-0002-7111-0077>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Posit Software, PBC [cph, fnd] (03wc8by49)",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
+        "Built": "R 4.4.3; ; 2026-02-26 21:29:42 UTC; windows"
       }
     },
     "evaluate": {
@@ -1832,6 +1943,43 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-08-15 09:00:02 UTC",
         "Built": "R 4.4.3; ; 2025-05-28 01:43:38 UTC; windows"
+      }
+    },
+    "httr2": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "httr2",
+        "Title": "Perform HTTP Requests and Process the Responses",
+        "Version": "1.2.2",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Maximilian\", \"Girlich\", role = \"ctb\")\n  )",
+        "Description": "Tools for creating and modifying HTTP requests, then\n    performing them and processing the results. 'httr2' is a modern\n    re-imagining of 'httr' that uses a pipe-based interface and solves\n    more of the problems that API wrapping packages face.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://httr2.r-lib.org, https://github.com/r-lib/httr2",
+        "BugReports": "https://github.com/r-lib/httr2/issues",
+        "Depends": "R (>= 4.1)",
+        "Imports": "cli (>= 3.0.0), curl (>= 6.4.0), glue, lifecycle, magrittr,\nopenssl, R6, rappdirs, rlang (>= 1.1.0), vctrs (>= 0.6.3),\nwithr",
+        "Suggests": "askpass, bench, clipr, covr, docopt, httpuv, jose, jsonlite,\nknitr, later (>= 1.4.0), nanonext, otel (>= 0.2.0), otelsdk (>=\n0.2.0), paws.common (>= 0.8.0), promises, rmarkdown, testthat\n(>= 3.1.8), tibble, webfakes (>= 1.4.0), xml2",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/testthat/start-first": "resp-stream, req-perform",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-12-05 17:46:06 UTC; hadleywickham",
+        "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Maximilian Girlich [ctb]",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-12-08 09:50:02 UTC",
+        "Built": "R 4.4.3; ; 2026-02-25 03:25:25 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "httr2",
+        "RemoteRef": "httr2",
+        "RemoteRepos": "https://cran.rstudio.com/",
+        "RemotePkgPlatform": "i386+x86_64-w64-mingw32",
+        "RemoteSha": "1.2.2"
       }
     },
     "ids": {
@@ -4337,16 +4485,19 @@
   },
   "files": {
     "imagen/i1.png": {
-      "checksum": "424b92b8bde25d0fc89b565ce97530d3"
+      "checksum": "7de360edc06bc695e70e05f97c6e9f82"
+    },
+    "imagen/i2.png": {
+      "checksum": "3508603feedd2a7301c1a9eaad303e34"
     },
     "README.md": {
-      "checksum": "6f41382429a288164a8352dfcf2d67c6"
+      "checksum": "69fe0075c86fe4d2c49de2ebebcfec27"
     },
     "report.html": {
-      "checksum": "bbd2586fadf929cf728831388c6c7602"
+      "checksum": "5730ccf2cfc37964ddb755bcf61ddd84"
     },
     "report.qmd": {
-      "checksum": "bcf66d2a24b35d54296b6b490e2854a7"
+      "checksum": "16cd2f33688ad2380781edc96d6e10ab"
     },
     "report_files/libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -4441,38 +4592,20 @@
     "report_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js": {
       "checksum": "4c72a5a790e066510f9eb68541280646"
     },
-    "report_files/libs/quarto-dashboard/components.js": {
-      "checksum": "ac49ebff39666f27f4631a3914841683"
+    "report_files/libs/quarto-contrib/glightbox/glightbox.min.css": {
+      "checksum": "9b438b29cef1c212d1c65a877ffc7232"
     },
-    "report_files/libs/quarto-dashboard/datatables.min.css": {
-      "checksum": "7b2279175549cd49b758a7d5b4da6cd6"
+    "report_files/libs/quarto-contrib/glightbox/glightbox.min.js": {
+      "checksum": "2b4c8cbaade24ecb58bcb0d89694ccee"
     },
-    "report_files/libs/quarto-dashboard/datatables.min.js": {
-      "checksum": "80521430bee6a8d1a1ba48987ff870c1"
-    },
-    "report_files/libs/quarto-dashboard/pdfmake.min.js": {
-      "checksum": "95caca411bcbd3095c0f8db152de05dd"
-    },
-    "report_files/libs/quarto-dashboard/quarto-dashboard.js": {
-      "checksum": "bd2bba0a7c7d9aa8840eb5a9c73c2c28"
-    },
-    "report_files/libs/quarto-dashboard/stickythead.js": {
-      "checksum": "5b27aeec9a60192899f23015fd741564"
-    },
-    "report_files/libs/quarto-dashboard/vfs_fonts.js": {
-      "checksum": "8a026906153f3e29bc684f6b392e8654"
-    },
-    "report_files/libs/quarto-dashboard/web-components.js": {
-      "checksum": "c91de9b5866fb45c694bbeafa119d6b9"
+    "report_files/libs/quarto-contrib/glightbox/lightbox.css": {
+      "checksum": "2857705abe7b271745f7d60903d2eedd"
     },
     "report_files/libs/quarto-html/anchor.min.js": {
       "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
     },
     "report_files/libs/quarto-html/popper.min.js": {
       "checksum": "3a4a291ccf3f1ea0f82b641542fd3827"
-    },
-    "report_files/libs/quarto-html/quarto-syntax-highlighting-dark.css": {
-      "checksum": "4dca331c0806f351d3f630ba7f039574"
     },
     "report_files/libs/quarto-html/quarto-syntax-highlighting.css": {
       "checksum": "49bff82b9355f257417faaaa77dd1607"

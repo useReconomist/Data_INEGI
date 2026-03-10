@@ -185,7 +185,7 @@ Para usar los modelos de lenguaje en R existen distintas librerías, una que me 
 
 ### Breve pausa para ver si ya conseguimos algún token para conectarnos ...
 
-Como buena práctica te recomiendo guardarlo en una variable de entorno (puedes hacerlo de forma sencilla con la librería [usethis](https://usethis.r-lib.org/)...usethis::edit_r_environ()) pero ahorita lo haremos como mala practica.
+Debes guardar las variables en una variable de entorno (puedes hacerlo de forma sencilla con la librería [usethis](https://usethis.r-lib.org/) con la función usethis::edit_r_environ()) , se abrirá una ventana y ahí podrás asignar tus variables, una vez que las tengas, las guardarás, cerrarás la pestañas y reiniciarás "R" 
 Ya se asi usaste algún llm de github o gemini usaremos la palabra *chat*, (para hacernos la vida un poco facil en este ejercicio ) les llamaremos m1 y m2 
 
 ```{r}
