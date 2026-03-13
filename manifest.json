@@ -14,6 +14,29 @@
     "engines": ["knitr"]
   },
   "packages": {
+    "BH": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "BH",
+        "Type": "Package",
+        "Title": "Boost C++ Header Files",
+        "Version": "1.87.0-1",
+        "Date": "2024-12-17",
+        "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"John W.\", \"Emerson\", role = \"aut\"), \n             person(\"Michael J.\", \"Kane\", role = \"aut\", \n                    comment = c(ORCID = \"0000-0003-1899-6662\")))",
+        "Description": "Boost provides free peer-reviewed portable C++ source \n libraries.  A large part of Boost is provided as C++ template code\n which is resolved entirely at compile-time without linking.  This \n package aims to provide the most useful subset of Boost libraries \n for template use among CRAN packages. By placing these libraries in \n this package, we offer a more efficient distribution system for CRAN \n as replication of this code in the sources of other packages is \n avoided. As of release 1.84.0-0, the following Boost libraries are\n included: 'accumulators' 'algorithm' 'align' 'any' 'atomic' 'beast'\n 'bimap' 'bind' 'circular_buffer' 'compute' 'concept' 'config'\n 'container' 'date_time' 'detail' 'dynamic_bitset' 'exception'\n 'flyweight' 'foreach' 'functional' 'fusion' 'geometry' 'graph' 'heap'\n 'icl' 'integer' 'interprocess' 'intrusive' 'io' 'iostreams'\n 'iterator' 'lambda2' 'math' 'move' 'mp11' 'mpl' 'multiprecision'\n 'numeric' 'pending' 'phoenix' 'polygon' 'preprocessor' 'process'\n 'propery_tree' 'qvm' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort'\n 'spirit' 'tuple' 'type_traits' 'typeof' 'unordered' 'url' 'utility'\n 'uuid'.",
+        "License": "BSL-1.0",
+        "URL": "https://github.com/eddelbuettel/bh,\nhttps://dirk.eddelbuettel.com/code/bh.html",
+        "BugReports": "https://github.com/eddelbuettel/bh/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-12-17 14:33:33 UTC; edd",
+        "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  John W. Emerson [aut],\n  Michael J. Kane [aut] (<https://orcid.org/0000-0003-1899-6662>)",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-12-17 18:20:03 UTC",
+        "Built": "R 4.4.2; ; 2024-12-21 00:52:14 UTC; windows"
+      }
+    },
     "DBI": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -212,6 +235,66 @@
         "Archs": "x64"
       }
     },
+    "RcppEigen": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "RcppEigen",
+        "Type": "Package",
+        "Title": "'Rcpp' Integration for the 'Eigen' Templated Linear Algebra\nLibrary",
+        "Version": "0.3.4.0.2",
+        "Date": "2024-08-23",
+        "Authors@R": "c(person(\"Doug\", \"Bates\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-8316-9503\")),\n             person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"Romain\", \"Francois\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0002-2444-4226\")),\n             person(\"Yixuan\", \"Qiu\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-0109-6692\")),\n             person(\"Authors of\", \"Eigen\", role = \"cph\",\n                    comment = \"Authorship and copyright in included Eigen library as detailed in inst/COPYRIGHTS\"))",
+        "Copyright": "See the file COPYRIGHTS for various Eigen copyright details",
+        "Description": "R and 'Eigen' integration using 'Rcpp'.\n 'Eigen' is a C++ template library for linear algebra: matrices, vectors,\n numerical solvers and related algorithms.  It supports dense and sparse\n matrices on integer, floating point and complex numbers, decompositions of\n such matrices, and solutions of linear systems. Its performance on many\n algorithms is comparable with some of the best implementations based on\n 'Lapack' and level-3 'BLAS'. The 'RcppEigen' package includes the header\n files from the 'Eigen' C++ template library. Thus users do not need to\n install 'Eigen' itself in order to use 'RcppEigen'. Since version 3.1.1,\n 'Eigen' is licensed under the Mozilla Public License (version 2); earlier\n version were licensed under the GNU LGPL version 3 or later. 'RcppEigen'\n (the 'Rcpp' bindings/bridge to 'Eigen') is licensed under the GNU GPL\n version 2 or later, as is the rest of 'Rcpp'.",
+        "License": "GPL (>= 2) | file LICENSE",
+        "LazyLoad": "yes",
+        "Depends": "R (>= 3.6.0)",
+        "LinkingTo": "Rcpp",
+        "Imports": "Rcpp (>= 0.11.0), stats, utils",
+        "Suggests": "Matrix, inline, tinytest, pkgKitten, microbenchmark",
+        "URL": "https://github.com/RcppCore/RcppEigen,\nhttps://dirk.eddelbuettel.com/code/rcpp.eigen.html",
+        "BugReports": "https://github.com/RcppCore/RcppEigen/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-08-23 18:11:22 UTC; edd",
+        "Author": "Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>),\n  Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>),\n  Yixuan Qiu [aut] (<https://orcid.org/0000-0003-0109-6692>),\n  Authors of Eigen [cph] (Authorship and copyright in included Eigen\n    library as detailed in inst/COPYRIGHTS)",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-08-24 06:30:02 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-07 02:15:20 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "RcppSimdJson": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "RcppSimdJson",
+        "Type": "Package",
+        "Title": "'Rcpp' Bindings for the 'simdjson' Header-Only Library for\n'JSON' Parsing",
+        "Version": "0.1.13",
+        "Date": "2025-03-07",
+        "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"Brendan\", \"Knapp\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-3284-4972\")),\n             person(\"Daniel\", \"Lemire\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-3306-6922\")))",
+        "Description": "The 'JSON' format is ubiquitous for data interchange, and the\n 'simdjson' library written by Daniel Lemire (and many contributors) provides a\n high-performance parser for these files which by relying on parallel 'SIMD'\n instruction manages to parse these files as faster than disk speed. See the\n <doi:10.48550/arXiv.1902.08318> paper for more details about 'simdjson'.  This\n package parses 'JSON' from string, file, or remote URLs under a variety of\n settings.",
+        "License": "GPL (>= 2)",
+        "Imports": "Rcpp, utils",
+        "LinkingTo": "Rcpp",
+        "Suggests": "bit64, tinytest",
+        "SystemRequirements": "A C++17 compiler is required",
+        "URL": "https://github.com/eddelbuettel/rcppsimdjson/",
+        "BugReports": "https://github.com/eddelbuettel/rcppsimdjson/issues",
+        "RoxygenNote": "7.1.1",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2025-03-07 13:13:55 UTC; edd",
+        "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  Brendan Knapp [aut] (<https://orcid.org/0000-0003-3284-4972>),\n  Daniel Lemire [aut] (<https://orcid.org/0000-0003-3306-6922>)",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-03-07 16:20:17 UTC",
+        "Built": "R 4.4.3; x86_64-w64-mingw32; 2025-03-07 23:32:42 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "S7": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -303,6 +386,58 @@
         "Date/Publication": "2024-10-04 07:20:03 UTC",
         "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-11-04 02:19:54 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "aws.s3": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "aws.s3",
+        "Type": "Package",
+        "Title": "'AWS S3' Client Package",
+        "Version": "0.3.21",
+        "Authors@R": "c(person(\"Thomas J.\", \"Leeper\", role = \"aut\",\n                    email = \"thosjleeper@gmail.com\",\n                    comment = c(ORCID = \"0000-0003-4097-6326\")),\n             person(\"Boettiger\", \"Carl\", role = \"ctb\"),\n             person(\"Andrew\", \"Martin\", role = \"ctb\"),\n             person(\"Mark\", \"Thompson\", role = \"ctb\"),\n             person(\"Tyler\", \"Hunt\", role = \"ctb\"),\n             person(\"Steven\", \"Akins\", role = \"ctb\"),\n             person(\"Bao\", \"Nguyen\", role = \"ctb\"),\n             person(\"Thierry\", \"Onkelinx\", role = \"ctb\"),\n             person(\"Andrii\", \"Degtiarov\", role = \"ctb\"),\n             person(\"Dhruv\", \"Aggarwal\", role = \"ctb\"),\n             person(\"Alyssa\", \"Columbus\", role = \"ctb\"),\n             person(\"Simon\", \"Urbanek\", role = c(\"cre\", \"ctb\"),\n                    email = \"simon.urbanek@R-project.org\")\n\t     )",
+        "Maintainer": "Simon Urbanek <simon.urbanek@R-project.org>",
+        "Description": "A simple client package for the Amazon Web Services ('AWS') Simple\n    Storage Service ('S3') 'REST' 'API' <https://aws.amazon.com/s3/>.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/cloudyr/aws.s3",
+        "BugReports": "https://github.com/cloudyr/aws.s3/issues",
+        "Encoding": "UTF-8",
+        "Imports": "utils, tools, curl, httr, xml2 (> 1.0.0), base64enc, digest,\naws.signature (>= 0.3.7)",
+        "Suggests": "testthat, datasets",
+        "RoxygenNote": "7.0.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-04-07 20:31:01 UTC; svnuser",
+        "Author": "Thomas J. Leeper [aut] (<https://orcid.org/0000-0003-4097-6326>),\n  Boettiger Carl [ctb],\n  Andrew Martin [ctb],\n  Mark Thompson [ctb],\n  Tyler Hunt [ctb],\n  Steven Akins [ctb],\n  Bao Nguyen [ctb],\n  Thierry Onkelinx [ctb],\n  Andrii Degtiarov [ctb],\n  Dhruv Aggarwal [ctb],\n  Alyssa Columbus [ctb],\n  Simon Urbanek [cre, ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-04-07 21:10:02 UTC",
+        "Built": "R 4.4.2; ; 2024-11-07 02:48:00 UTC; windows"
+      }
+    },
+    "aws.signature": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "aws.signature",
+        "Type": "Package",
+        "Title": "Amazon Web Services Request Signatures",
+        "Version": "0.6.0",
+        "Date": "2020-06-01",
+        "Authors@R": "c(person(\"Thomas J.\", \"Leeper\",\n                    role = c(\"aut\"),\n                    email = \"thosjleeper@gmail.com\",\n                    comment = c(ORCID = \"0000-0003-4097-6326\")),\n             person(\"Jonathan\", \"Stott\", email = \"jonathan.stott@magairports.com\", role = c(\"cre\", \"aut\")),\n             person(\"Mike\", \"Kaminsky\", email = \"kaminsky.michael@gmail.com\", role = \"ctb\")\n            )",
+        "Description": "Generates version 2 and version 4 request signatures for Amazon Web Services ('AWS') <https://aws.amazon.com/> Application Programming Interfaces ('APIs') and provides a mechanism for retrieving credentials from environment variables, 'AWS' credentials files, and 'EC2' instance metadata. For use on 'EC2' instances, users will need to install the suggested package 'aws.ec2metadata' <https://cran.r-project.org/package=aws.ec2metadata>.",
+        "License": "GPL (>= 2)",
+        "Imports": "digest, base64enc",
+        "Suggests": "testthat (>= 2.1.0), aws.ec2metadata (>= 0.1.6)",
+        "URL": "https://github.com/cloudyr/aws.signature",
+        "BugReports": "https://github.com/cloudyr/aws.signature/issues",
+        "RoxygenNote": "7.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2020-06-01 09:51:14 UTC; jon_m",
+        "Author": "Thomas J. Leeper [aut] (<https://orcid.org/0000-0003-4097-6326>),\n  Jonathan Stott [cre, aut],\n  Mike Kaminsky [ctb]",
+        "Maintainer": "Jonathan Stott <jonathan.stott@magairports.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2020-06-01 10:10:02 UTC",
+        "Built": "R 4.4.2; ; 2024-11-07 01:42:33 UTC; windows"
       }
     },
     "backports": {
@@ -463,6 +598,32 @@
         "Date/Publication": "2024-10-03 23:00:54 UTC",
         "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-10-04 23:50:58 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "bivariateLeaflet": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "bivariateLeaflet",
+        "Title": "Create Bivariate Choropleth Maps with 'Leaflet'",
+        "Version": "0.1.0",
+        "Authors@R": "\n    c(person(given = \"Michael\",\n        family = \"Duprey\",\n        role = c(\"aut\", \"cre\"),\n        email = \"mduprey@rti.org\"),\n    person(given = \"Chris\",\n        family = \"Inkpen\",\n        role = \"ctb\",\n        email = \"cinkpen@rti.org\"))",
+        "Description": "Creates bivariate choropleth maps using 'Leaflet'. This package provides\n    tools for visualizing the relationship between two variables through a color\n    matrix representation on an interactive map.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "Imports": "leaflet, dplyr, htmltools, rlang, sf",
+        "Suggests": "testthat (>= 3.0.0), knitr, rmarkdown, tidycensus, tidyr",
+        "Config/testthat/edition": "3",
+        "VignetteBuilder": "knitr",
+        "Depends": "R (>= 3.50)",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-12-18 18:50:51 UTC; mduprey",
+        "Author": "Michael Duprey [aut, cre],\n  Chris Inkpen [ctb]",
+        "Maintainer": "Michael Duprey <mduprey@rti.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-12-19 20:40:13 UTC",
+        "Built": "R 4.4.3; ; 2025-04-07 02:28:20 UTC; windows"
       }
     },
     "blob": {
@@ -1613,6 +1774,34 @@
         "Archs": "x64"
       }
     },
+    "googlePolylines": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "googlePolylines",
+        "Type": "Package",
+        "Title": "Encoding Coordinates into 'Google' Polylines",
+        "Version": "0.8.5",
+        "Date": "2024-10-20",
+        "Authors@R": "c(\n    person(\"David\", \"Cooley\", ,\"dcooley@symbolix.com.au\", role = c(\"aut\", \"cre\")),\n    person(\"Paulo\", \"Barcelos\", role = \"ctb\", comment = \"Author of c++ decode_polyline\"),\n    person(\"Chris\", \"Muir\", role = \"ctb\")\n    )",
+        "Description": "Encodes simple feature ('sf') objects and coordinates, and decodes polylines \n    using the 'Google' polyline encoding algorithm (<https://developers.google.com/maps/documentation/utilities/polylinealgorithm>).",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "Imports": "Rcpp (>= 1.0.10)",
+        "LinkingTo": "Rcpp",
+        "RoxygenNote": "7.3.1",
+        "Suggests": "covr, knitr, rmarkdown, sf, sfheaders, testthat",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-10-22 08:23:33 UTC; dave",
+        "Author": "David Cooley [aut, cre],\n  Paulo Barcelos [ctb] (Author of c++ decode_polyline),\n  Chris Muir [ctb]",
+        "Maintainer": "David Cooley <dcooley@symbolix.com.au>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-10-22 09:00:02 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-12 11:26:16 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "googledrive": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2037,6 +2226,29 @@
         "Archs": "x64"
       }
     },
+    "jpeg": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "jpeg",
+        "Version": "0.1-10",
+        "Title": "Read and write JPEG images",
+        "Author": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+        "Depends": "R (>= 2.9.0)",
+        "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the JPEG format. It can read and write both files and in-memory raw vectors.",
+        "License": "GPL-2 | GPL-3",
+        "SystemRequirements": "libjpeg",
+        "URL": "https://www.rforge.net/jpeg/",
+        "BugReports": "https://github.com/s-u/jpeg/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2022-11-29 09:23:09 UTC; rforge",
+        "Repository": "CRAN",
+        "Date/Publication": "2022-11-29 11:12:52 UTC",
+        "Built": "R 4.4.0; x86_64-w64-mingw32; 2024-04-23 00:25:24 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "jquerylib": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2458,6 +2670,37 @@
         "Archs": "x64"
       }
     },
+    "magick": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "magick",
+        "Type": "Package",
+        "Title": "Advanced Graphics and Image-Processing in R",
+        "Version": "2.8.5",
+        "Authors@R": "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n    comment = c(ORCID = \"0000-0002-4035-0289\"))",
+        "Description": "Bindings to 'ImageMagick': the most comprehensive open-source image\n    processing library available. Supports many common formats (png, jpeg, tiff,\n    pdf, etc) and manipulations (rotate, scale, crop, trim, flip, blur, etc).\n    All operations are vectorized via the Magick++ STL meaning they operate either\n    on a single frame or a series of frames for working with layers, collages,\n    or animation. In RStudio images are automatically previewed when printed to\n    the console, resulting in an interactive editing environment. The latest \n    version of the package includes a native graphics device for creating \n    in-memory graphics or drawing onto images using pixel coordinates.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://docs.ropensci.org/magick/\nhttps://ropensci.r-universe.dev/magick",
+        "BugReports": "https://github.com/ropensci/magick/issues",
+        "SystemRequirements": "ImageMagick++: ImageMagick-c++-devel (rpm) or\nlibmagick++-dev (deb)",
+        "VignetteBuilder": "knitr",
+        "Imports": "Rcpp (>= 0.12.12), magrittr, curl",
+        "LinkingTo": "Rcpp",
+        "Suggests": "av (>= 0.3), spelling, jsonlite, methods, knitr, rmarkdown,\nrsvg, webp, pdftools, ggplot2, gapminder, IRdisplay, tesseract\n(>= 2.0), gifski",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "Language": "en-US",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-09-19 16:13:03 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>)",
+        "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-09-20 08:40:10 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-07 01:42:29 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "magrittr": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2486,6 +2729,62 @@
         "Date/Publication": "2022-03-30 07:30:09 UTC",
         "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-11-04 01:27:45 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "mapboxapi": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "mapboxapi",
+        "Type": "Package",
+        "Title": "R Interface to 'Mapbox' Web Services",
+        "Date": "2024-09-20",
+        "Version": "0.6.2",
+        "Authors@R": "\n    c(person(given = \"Kyle\", family = \"Walker\", email = \"kyle@walker-data.com\", \n    role = c(\"aut\", \"cre\")), \n    person(given = \"Eli\", family = \"Pousson\", email = \"eli.pousson@gmail.com\",\n    role = \"ctb\"),\n    person(given = \"Anthony\", family = \"North\", role = c(\"ctb\", \"cph\"), email = \"anthony.jl.north@gmail.com\"),\n    person(given = \"Miles\", family = \"McBain\", role = \"ctb\", email = \"miles.mcbain@gmail.com\"))",
+        "Maintainer": "Kyle Walker <kyle@walker-data.com>",
+        "Description": "Includes support for 'Mapbox' Navigation APIs, including directions, \n  isochrones, and route optimization; the Search API for forward and reverse geocoding; \n  the Maps API for interacting with 'Mapbox' vector tilesets and visualizing \n  'Mapbox' maps in R; and 'Mapbox Tiling Service' and 'tippecanoe' for generating map tiles.\n  See <https://docs.mapbox.com/api/> for more information about the 'Mapbox' APIs.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "URL": "https://github.com/walkerke/mapboxapi,\nhttps://walker-data.com/mapboxapi/",
+        "BugReports": "https://github.com/walkerke/mapboxapi/issues",
+        "Depends": "R (>= 3.3.0)",
+        "Imports": "httr, sf, jsonlite, purrr, curl, dplyr (>= 1.0.0), tidyr (>=\n1.0.0), aws.s3, stringi, slippymath, protolite, rlang,\ngeojsonsf, magick, leaflet, units, raster, png, jpeg, htmltools",
+        "Suggests": "ggspatial, grDevices, mapdeck, tigris, tidycensus, tmap,\nmapboxer, testthat (>= 3.0.0)",
+        "RoxygenNote": "7.3.1",
+        "Config/testthat/edition": "3",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-09-20 17:52:37 UTC; kylewalker",
+        "Author": "Kyle Walker [aut, cre],\n  Eli Pousson [ctb],\n  Anthony North [ctb, cph],\n  Miles McBain [ctb]",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-09-20 18:20:02 UTC",
+        "Built": "R 4.4.3; ; 2025-11-01 04:58:43 UTC; windows"
+      }
+    },
+    "mapiso": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "mapiso",
+        "Type": "Package",
+        "Title": "Create Contour Polygons from Regular Grids",
+        "Version": "0.3.0",
+        "Authors@R": "\n    person(\"Timothée\", \"Giraud\", email = \"timothee.giraud@cnrs.fr\", \n        role = c(\"cre\",\"aut\"), comment = c(ORCID = \"0000-0002-1932-3323\"))",
+        "Description": "Regularly spaced grids containing continuous data are transformed\n    to contour polygons. A grid can be defined by a data.frame (x, y, value),\n    an 'sf' object or a raster from 'terra'.",
+        "URL": "https://github.com/riatelab/mapiso",
+        "BugReports": "https://github.com/riatelab/mapiso/issues/",
+        "Depends": "R (>= 3.6.0)",
+        "Imports": "sf, isoband",
+        "Suggests": "covr, mapsf, terra, tinytest",
+        "License": "GPL (>= 3)",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-05-12 11:52:16 UTC; tim",
+        "Author": "Timothée Giraud [cre, aut] (<https://orcid.org/0000-0002-1932-3323>)",
+        "Maintainer": "Timothée Giraud <timothee.giraud@cnrs.fr>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-05-12 12:20:02 UTC",
+        "Built": "R 4.4.2; ; 2024-11-12 12:55:26 UTC; windows"
       }
     },
     "mapview": {
@@ -2674,6 +2973,34 @@
         "Built": "R 4.4.1; ; 2024-11-04 02:19:58 UTC; windows"
       }
     },
+    "nabor": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "nabor",
+        "Type": "Package",
+        "Title": "Wraps 'libnabo', a Fast K Nearest Neighbour Library for Low\nDimensions",
+        "Version": "0.5.0",
+        "Author": "Stephane Mangenat (for 'libnabo'), Gregory Jefferis",
+        "Maintainer": "Gregory Jefferis <jefferis@gmail.com>",
+        "Description": "An R wrapper for 'libnabo', an exact or approximate k nearest\n    neighbour library which is optimised for low dimensional spaces (e.g. 3D).\n    'libnabo' has speed and space advantages over the 'ANN' library wrapped by\n    package 'RANN'. 'nabor' includes a knn function that is designed as a \n    drop-in replacement for 'RANN' function nn2. In addition, objects which \n    include the k-d tree search structure can be returned to speed up repeated \n    queries of the same set of target points.",
+        "License": "BSD_3_clause + file LICENSE",
+        "Copyright": "libnabo is copyright 2010--2011, Stephane Magnenat, ASL,\nETHZ, Switzerland <stephane at magnenat dot net>",
+        "URL": "https://github.com/jefferis/nabor\nhttps://github.com/ethz-asl/libnabo",
+        "BugReports": "https://github.com/jefferis/nabor/issues",
+        "Depends": "R (>= 3.0.2)",
+        "Imports": "Rcpp (>= 0.11.2), methods",
+        "LinkingTo": "Rcpp, RcppEigen (>= 0.3.2.2.0), BH (>= 1.54.0-4)",
+        "Suggests": "testthat, RANN",
+        "RoxygenNote": "6.0.1",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-07-11 15:23:05 UTC; jefferis",
+        "Repository": "CRAN",
+        "Date/Publication": "2018-07-11 16:00:02 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-07 02:31:18 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "nlme": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2705,6 +3032,36 @@
         "Archs": "x64"
       }
     },
+    "nngeo": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "nngeo",
+        "Type": "Package",
+        "Title": "k-Nearest Neighbor Join for Spatial Data",
+        "Version": "0.4.8",
+        "Authors@R": "c(\n    person(\"Michael\", \"Dorman\", email = \"dorman@post.bgu.ac.il\", role = c(\"aut\", \"cre\")),\n    person(\"Johnathan\", \"Rush\", email = \"johnathan.rush@mssm.edu\", role = c(\"ctb\")),\n    person(\"Ian\", \"Hough\", email = \"hough@post.bgu.ac.il\", role = c(\"ctb\")),\n    person(\"Dominic\", \"Russel\", email = \"domrussel@gmail.com\", role = c(\"ctb\")),\n    person(\"Luigi\", \"Ranghetti\", email = \"luigi.ranghetti@gmail.com\", role = c(\"ctb\")),\n    person(\"Attilio\", \"Benini\", email = \"attilio.benini@gmx.net\", role = c(\"ctb\")),\n    person(\"Arnaud\", \"Tarroux\", email = \"arnaud.tarroux@nina.no\", role = c(\"ctb\")),\n    person(\"Felipe\", \"Matas\", email = \"felipematas@yahoo.com\", role = c(\"ctb\")),\n    person(\"Charles\", \"F.F Karney\", role = c(\"ctb\", \"cph\"), \n        comment=\"Author of included C code from 'GeographicLib' for geodesic distance\"))",
+        "Description": "K-nearest neighbor search for projected and non-projected 'sf' spatial layers. Nearest neighbor search uses (1) C code from 'GeographicLib' for lon-lat point layers, (2) function knn() from package 'nabor' for projected point layers, or (3) function st_distance() from package 'sf' for line or polygon layers. The package also includes several other utility functions for spatial analysis.",
+        "Imports": "nabor, units, methods, parallel, data.table",
+        "Depends": "R (>= 3.5.0), sf (>= 0.6)",
+        "License": "MIT + file LICENSE",
+        "LazyData": "TRUE",
+        "RoxygenNote": "7.2.3",
+        "Suggests": "DBI, RPostgreSQL, stars, knitr, rmarkdown, tinytest",
+        "VignetteBuilder": "knitr",
+        "URL": "https://michaeldorman.github.io/nngeo/,\nhttps://github.com/michaeldorman/nngeo/",
+        "BugReports": "https://github.com/michaeldorman/nngeo/issues/",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-04-17 09:09:49 UTC; michael",
+        "Author": "Michael Dorman [aut, cre],\n  Johnathan Rush [ctb],\n  Ian Hough [ctb],\n  Dominic Russel [ctb],\n  Luigi Ranghetti [ctb],\n  Attilio Benini [ctb],\n  Arnaud Tarroux [ctb],\n  Felipe Matas [ctb],\n  Charles F.F Karney [ctb, cph] (Author of included C code from\n    'GeographicLib' for geodesic distance)",
+        "Maintainer": "Michael Dorman <dorman@post.bgu.ac.il>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-04-17 09:30:03 UTC",
+        "Built": "R 4.4.3; x86_64-w64-mingw32; 2026-02-25 03:29:28 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "openssl": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -2732,6 +3089,33 @@
         "Date/Publication": "2024-09-20 08:40:05 UTC",
         "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-11-04 02:26:58 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "osrm": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "osrm",
+        "Type": "Package",
+        "Title": "Interface Between R and the OpenStreetMap-Based Routing Service\nOSRM",
+        "Version": "4.2.0",
+        "Authors@R": "c(person(\"Timothée\", \"Giraud\", email = \"timothee.giraud@cnrs.fr\",\n    role = c(\"cre\",\"aut\"),  comment = c(ORCID = \"0000-0002-1932-3323\")),\n    person(\"Robin\", \"Cura\", role = c(\"ctb\"),\n    comment = c(ORCID = \"0000-0001-5926-1828\")),\n    person(\"Matthieu\", \"Viry\", role = c(\"ctb\"),\n    comment = c(ORCID = \"0000-0002-0693-8556\")),\n    person(\"Robin\", \"Lovelace\", role = c(\"ctb\"),\n    comment = c(ORCID = \"0000-0001-5679-6536\"))\n    )",
+        "Description": "An interface between R and the 'OSRM' API. 'OSRM' is a routing\n    service based on 'OpenStreetMap' data. See <http://project-osrm.org/> for more\n    information. This package enables the computation of routes, trips, isochrones and\n    travel distances matrices (travel time and kilometric distance).",
+        "License": "GPL (>= 3)",
+        "Imports": "RcppSimdJson, curl, utils, mapiso, googlePolylines, sf",
+        "Depends": "R (>= 3.5.0)",
+        "Suggests": "mapsf, tinytest, covr",
+        "URL": "https://github.com/riatelab/osrm",
+        "BugReports": "https://github.com/riatelab/osrm/issues",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-05-06 13:22:24 UTC; tim",
+        "Author": "Timothée Giraud [cre, aut] (<https://orcid.org/0000-0002-1932-3323>),\n  Robin Cura [ctb] (<https://orcid.org/0000-0001-5926-1828>),\n  Matthieu Viry [ctb] (<https://orcid.org/0000-0002-0693-8556>),\n  Robin Lovelace [ctb] (<https://orcid.org/0000-0001-5679-6536>)",
+        "Maintainer": "Timothée Giraud <timothee.giraud@cnrs.fr>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-05-06 14:50:02 UTC",
+        "Built": "R 4.4.2; ; 2024-11-12 13:10:03 UTC; windows"
       }
     },
     "pillar": {
@@ -2952,6 +3336,36 @@
         "Repository": "CRAN",
         "Date/Publication": "2024-11-28 00:40:02 UTC",
         "Built": "R 4.4.2; x86_64-w64-mingw32; 2025-01-11 02:25:17 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "protolite": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "protolite",
+        "Type": "Package",
+        "Title": "Highly Optimized Protocol Buffer Serializers",
+        "Authors@R": "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\n    comment = c(ORCID = \"0000-0002-4035-0289\"))",
+        "Description": "Pure C++ implementations for reading and writing several common data \n    formats based on Google protocol-buffers. Currently supports 'rexp.proto' for \n    serialized R objects, 'geobuf.proto' for binary geojson, and 'mvt.proto' for \n    vector tiles. This package uses the auto-generated C++ code by protobuf-compiler, \n    hence the entire serialization is optimized at compile time. The 'RProtoBuf' \n    package on the other hand uses the protobuf runtime library to provide a general-\n    purpose toolkit for reading and writing arbitrary protocol-buffer data in R.",
+        "Version": "2.3.1",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/jeroen/protolite\nhttps://jeroen.r-universe.dev/protolite",
+        "BugReports": "https://github.com/jeroen/protolite/issues",
+        "SystemRequirements": "libprotobuf and protobuf-compiler",
+        "LinkingTo": "Rcpp",
+        "Imports": "Rcpp (>= 0.12.12), jsonlite",
+        "Suggests": "spelling, curl, testthat, sf",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.2.1",
+        "NeedsCompilation": "yes",
+        "Packaged": "2024-10-03 14:13:06 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>)",
+        "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-10-04 11:50:02 UTC",
+        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-11-07 01:48:11 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -3712,6 +4126,34 @@
         "Archs": "x64"
       }
     },
+    "slippymath": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "slippymath",
+        "Title": "Slippy Map Tile Tools",
+        "Version": "0.3.1",
+        "Authors@R": "c(\n    person(\"Miles\", \"McBain\", email = \"miles.mcbain@gmail.com\", role = c(\"aut\", \"cre\"), \n    comment = c(ORCID = \"0000-0003-2865-2548\")),\n    person(\"Michael\",\"Sumner\", email = \"mdsumner@gmail.com\", role = c(\"aut\")))",
+        "Description": "Provides functions for performing common tasks when working with\n  slippy map tile service APIs e.g. Google maps, Open Street Map, Mapbox, Stamen,\n  among others. Functionality includes converting from latitude and longitude to\n  tile numbers, determining tile bounding boxes, and compositing tiles to a\n  georeferenced raster image.",
+        "Depends": "R (>= 3.5.0)",
+        "License": "MIT + file LICENSE",
+        "URL": "https://www.github.com/milesmcbain/slippymath",
+        "BugReports": "https://www.github.com/milesmcbain/slippymath/issues",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "Imports": "raster, purrr, stats, png",
+        "Suggests": "testthat, knitr, rmarkdown",
+        "RoxygenNote": "6.1.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2019-06-28 15:28:10 UTC; miles",
+        "Author": "Miles McBain [aut, cre] (<https://orcid.org/0000-0003-2865-2548>),\n  Michael Sumner [aut]",
+        "Maintainer": "Miles McBain <miles.mcbain@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2019-06-28 16:20:03 UTC",
+        "Built": "R 4.4.2; ; 2024-11-07 02:48:54 UTC; windows"
+      }
+    },
     "sp": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -3988,6 +4430,36 @@
         "Date/Publication": "2023-03-20 06:30:02 UTC",
         "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-11-04 02:49:47 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "tidygeocoder": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "tidygeocoder",
+        "Type": "Package",
+        "Title": "Geocoding Made Easy",
+        "Version": "1.0.6",
+        "Authors@R": "\n    c(person(given = \"Jesse\",\n             family = \"Cambon\",\n             role = c(\"aut\", \"cre\"),\n             email = \"jesse.cambon@gmail.com\",\n             comment = c(ORCID = \"0000-0001-6854-1514\")),\n      person(given = \"Diego\",\n             family = \"Hernangómez\",\n             role = \"aut\",\n             email = \"diego.hernangomezherrero@gmail.com\",\n             comment = c(ORCID = \"0000-0001-8457-4658\")),\n      person(given = \"Christopher\",\n             family = \"Belanger\",\n             role = \"aut\",\n             email = \"christopher.a.belanger@gmail.com\",\n             comment = c(ORCID = \"0000-0003-2070-5721\")),\n      person(given = \"Daniel\", \n             family = \"Possenriede\", \n             email = \"possenriede+r@gmail.com\", \n             role = \"aut\", \n             comment = c(ORCID = \"0000-0002-6738-9845\")),\n      person(given = \"Otto\", \n             family = \"Hansen\", \n             email = \"otto@uchicago.edu\", \n             role = \"ctb\", \n             comment = c(ORCID = \"0000-0002-4618-5667\"))\n             )",
+        "Description": "An intuitive interface for getting data from geocoding services. ",
+        "License": "MIT + file LICENSE",
+        "URL": "https://jessecambon.github.io/tidygeocoder/,\nhttps://github.com/jessecambon/tidygeocoder",
+        "BugReports": "https://github.com/jessecambon/tidygeocoder/issues",
+        "Depends": "R (>= 3.5)",
+        "Imports": "tibble, dplyr, httr, jsonlite, progress",
+        "Suggests": "knitr, rmarkdown, ggplot2, ggrepel, maps, testthat (>=\n3.0.2), spelling",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "7.3.2",
+        "Language": "en-US",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-03-31 12:48:35 UTC; cambonator",
+        "Author": "Jesse Cambon [aut, cre] (<https://orcid.org/0000-0001-6854-1514>),\n  Diego Hernangómez [aut] (<https://orcid.org/0000-0001-8457-4658>),\n  Christopher Belanger [aut] (<https://orcid.org/0000-0003-2070-5721>),\n  Daniel Possenriede [aut] (<https://orcid.org/0000-0002-6738-9845>),\n  Otto Hansen [ctb] (<https://orcid.org/0000-0002-4618-5667>)",
+        "Maintainer": "Jesse Cambon <jesse.cambon@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-03-31 13:30:02 UTC",
+        "Built": "R 4.4.3; ; 2026-03-11 04:14:08 UTC; windows"
       }
     },
     "tidyr": {
@@ -4484,20 +4956,32 @@
     }
   },
   "files": {
+    "imagen/captura_pnt.jpg": {
+      "checksum": "5b94d5907c62bc5b10febaaeb35bd5d0"
+    },
     "imagen/i1.png": {
       "checksum": "7de360edc06bc695e70e05f97c6e9f82"
     },
     "imagen/i2.png": {
       "checksum": "3508603feedd2a7301c1a9eaad303e34"
     },
+    "imagen/imagenfinal.jpg": {
+      "checksum": "50245def324f088fbe2dc7c6bb064a60"
+    },
+    "imagen/mapbox.jpg": {
+      "checksum": "902772c8f4e2c629ad0d8c6387599d4d"
+    },
+    "imagen/token mapbox (1).pdf": {
+      "checksum": "9be1cd682c8f679fe2cebbf5adfe0574"
+    },
     "README.md": {
       "checksum": "69fe0075c86fe4d2c49de2ebebcfec27"
     },
     "report.html": {
-      "checksum": "3b190ebef6ed3d23ca7bf697c6cb96fa"
+      "checksum": "1f55da86dbd810e5bbeff287e7c26668"
     },
     "report.qmd": {
-      "checksum": "68fbb2fd2bec9ece2170ddf9ea4e82d6"
+      "checksum": "b0bf504b06da53619920cc3ba0794cd5"
     },
     "report_files/libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"

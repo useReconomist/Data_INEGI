@@ -300,10 +300,10 @@ con mapbox igual puedes crearlas, desde su api, puedes crear una cuenta de mapbo
 
 usa la función mb_acces_token para integrarlo como una variable de entorno.
 
-El token es funcional, así que puedes usarlo pero de preferencia usa el tuyo, para guardarla como variable de entorno puedes ya sea hacer esta operación o con la librería use_this la función edit_r_environ() agregando el token a "MAPBOX_PUBLIC_TOKEN = ..."
+El token de este ejemplo no es funcional, así que dentro d ela página puedes obtenerlo de forma gratuita, para guardarla como variable de entorno puedes ya sea hacer esta operación o con la librería use_this la función edit_r_environ() agregando el token a "MAPBOX_PUBLIC_TOKEN = ..."
 
 ```{r eval=FALSE}
-mapboxapi::mb_access_token(token = "pk.eyJ1Ijoibm9lb3NvcmlvcGs5MSIsImEiOiJjbWhsY2h5dzMyMGNsMmpwcXo0ZHd6eTdnIn0.WjFd2NzVW6UH6a4f3RzUow",
+mapboxapi::mb_access_token(token = "pk.eyJ1Ijoi[TU_TOKEN_AQUÍ]",
                            install = TRUE)
 ```
 
